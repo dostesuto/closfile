@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yt-dlp改</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .download-page {
+            max-width: 896px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .download-page h2 {
+            font-size: 26px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .download-page .description {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            text-align: left;
+        }
+        .download-page img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 16px 40px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .download-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="download-page">
+    <h2>yt-dlp改</h2>
+    <div class="description"><h1>YouTube Video Downloader <a href="yt-dlp.html" class="download-btn">日本語</a></h1>
+<p>This is a simple Python-based tool that allows you to download YouTube videos directly from the command line. It uses the <code>yt-dlp</code> library for downloading and <code>ffmpeg</code> for merging video and audio files.</p>
+<h2>Features</h2>
+<ul>
+<li>Download videos from YouTube.</li>
+<li>Automatically merge video and audio files using <code>ffmpeg</code>.</li>
+<li>Choose the best video and audio quality available.</li>
+<li>Customizable output file naming.</li>
+<li>Simple command-line interface (CUI).</li>
+</ul>
+<h2>Requirements</h2>
+<ul>
+<li>Python 3.6 or higher</li>
+<li><code>yt-dlp</code> (installed via <code>pip</code>)</li>
+<li><code>ffmpeg</code> (required for merging video and audio files)</li>
+</ul>
+<h2>Installation</h2>
+<h3>Step 1: Install Python</h3>
+<p>Ensure you have Python 3.6 or higher installed on your machine. You can download it from the official website: <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>.</p>
+<h3>Step 2: Install Dependencies</h3>
+<p>Clone the repository to your local machine:</p>
+<pre><code class="language-bash">git clone https://github.com/your-username/yt-video-downloader.git
+cd yt-video-downloader
+</code></pre>
+<p>Then, install the necessary Python libraries using <code>pip</code>:</p>
+<pre><code class="language-bash">pip install -r requirements.txt
+</code></pre>
+<p>Alternatively, you can manually install <code>yt-dlp</code> and <code>ffmpeg</code> using the following commands:</p>
+<pre><code class="language-bash">pip install yt-dlp
+</code></pre>
+<p><strong>For <code>ffmpeg</code></strong>:</p>
+<ul>
+<li>On Windows, download and install from <a href="https://ffmpeg.org/download.html">ffmpeg.org</a>.</li>
+<li>On macOS, use Homebrew: <code>brew install ffmpeg</code>.</li>
+<li>On Linux (Ubuntu/Debian), use: <code>sudo apt install ffmpeg</code>.</li>
+</ul>
+<p>Make sure that <code>ffmpeg</code> is accessible in your system&#39;s <code>PATH</code>.</p>
+<h3>Download the Python script</h3>
+<p><a href="https://github.com/dostesuto/yt-dl/releases/download/yt-dlp/app.py">Download Python script</a></p>
+<h3>Step 3: Run the Script</h3>
+<p>Once everything is installed, you can run the downloader script:</p>
+<pre><code class="language-bash">python app.py
+</code></pre>
+<p>You will be prompted to enter a YouTube video URL:</p>
+<pre><code class="language-arduino">YouTubeのURLを入力してください: https://www.youtube.com/watch?v=kagoEGKHZvU
+</code></pre>
+<p>The script will download the video and automatically merge the best video and audio formats.</p>
+<h2>Customization</h2>
+<p>You can modify the <code>app.py</code> file to customize the download behavior, such as changing the file output format or selecting a different quality.</p>
+<p>For example, to download only the best audio, you can change the <code>ydl_opts</code> to:</p>
+<pre><code class="language-python">ydl_opts = {
+    &#39;format&#39;: &#39;bestaudio&#39;,
+    &#39;outtmpl&#39;: &#39;%(title)s.%(ext)s&#39;,
+}
+</code></pre>
+<h2>Troubleshooting</h2>
+<h3>Error: <code>ffmpeg is not installed</code></h3>
+<p>Make sure you have <code>ffmpeg</code> installed and that it is in your system&#39;s <code>PATH</code>. For detailed installation instructions, see the section above.</p>
+<h3>Error: <code>ERROR: You have requested merging of multiple formats but ffmpeg is not installed</code></h3>
+<p>If you encounter this error, it&#39;s because <code>yt-dlp</code> requires <code>ffmpeg</code> to merge separate video and audio files. Installing <code>ffmpeg</code> will resolve the issue.</p>
+<h2>License</h2>
+<p>This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
+</div>
+    
+    <a href="https://github.com/dostesuto/yt-dl" class="download-btn">ダウンロード</a>
+</div>
+
+</body>
+</html>

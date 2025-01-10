@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yt-dlp改</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .download-page {
+            max-width: 896px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .download-page h2 {
+            font-size: 26px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .download-page .description {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            text-align: left;
+        }
+        .download-page img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 16px 40px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .download-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="download-page">
+    <h2>yt-dlp改</h2>
+    <div class="description">
+        <h1>YouTube 動画ダウンローダー <a href="yt-dlp-en.html" class="download-btn">english</a></h1>
+        <p>これは、コマンドラインからYouTube動画を直接ダウンロードするためのシンプルなPythonベースのツールです。ダウンロードには<code>yt-dlp</code>ライブラリを使用し、動画と音声ファイルのマージには<code>ffmpeg</code>を使用します。</p>
+        <h2>特徴</h2>
+        <ul>
+            <li>YouTubeから動画をダウンロード。</li>
+            <li><code>ffmpeg</code>を使って動画と音声を自動的にマージ。</li>
+            <li>利用可能な最良の動画および音声品質を選択。</li>
+            <li>カスタマイズ可能な出力ファイル名。</li>
+            <li>シンプルなコマンドラインインターフェース（CUI）。</li>
+        </ul>
+        <h2>必要条件</h2>
+        <ul>
+            <li>Python 3.6 以上</li>
+            <li><code>yt-dlp</code>（<code>pip</code>でインストール）</li>
+            <li><code>ffmpeg</code>（動画と音声のマージに必要）</li>
+        </ul>
+        <h2>インストール</h2>
+        <h3>ステップ 1: Python のインストール</h3>
+        <p>Python 3.6以上がインストールされていることを確認してください。公式サイトからダウンロードできます： <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></p>
+        <h3>ステップ 2: 依存関係のインストール</h3>
+        <p>リポジトリをローカルにクローンします：</p>
+        <pre><code class="language-bash">git clone https://github.com/your-username/yt-video-downloader.git
+cd yt-video-downloader
+</code></pre>
+        <p>次に、<code>pip</code>を使用して必要なPythonライブラリをインストールします：</p>
+        <pre><code class="language-bash">pip install -r requirements.txt
+</code></pre>
+        <p>または、次のコマンドを使用して<code>yt-dlp</code>と<code>ffmpeg</code>を手動でインストールできます：</p>
+        <pre><code class="language-bash">pip install yt-dlp
+</code></pre>
+        <p><strong>ffmpeg の場合</strong>：</p>
+        <ul>
+            <li>Windowsの場合、<a href="https://ffmpeg.org/download.html">ffmpeg.org</a>からダウンロードしてインストール。</li>
+            <li>macOSの場合、Homebrewを使用：<code>brew install ffmpeg</code></li>
+            <li>Linux（Ubuntu/Debian）の場合、次のコマンドを使用：<code>sudo apt install ffmpeg</code></li>
+        </ul>
+        <p><code>ffmpeg</code>がシステムの<code>PATH</code>に追加されていることを確認してください。</p>
+        <h3>Pythonスクリプトのダウンロード</h3>
+        <p><a href="https://github.com/dostesuto/yt-dl/releases/download/yt-dlp/app.py">Pythonスクリプトをダウンロード</a></p>
+        <h3>ステップ 3: スクリプトの実行</h3>
+        <p>すべてがインストールされたら、ダウンローダースクリプトを実行できます：</p>
+        <pre><code class="language-bash">python app.py
+</code></pre>
+        <p>YouTube動画のURLを入力するように求められます：</p>
+        <pre><code class="language-arduino">YouTubeのURLを入力してください: https://www.youtube.com/watch?v=kagoEGKHZvU
+</code></pre>
+        <p>スクリプトが動画をダウンロードし、最適な動画と音声フォーマットを自動的にマージします。</p>
+        <h2>カスタマイズ</h2>
+        <p><code>app.py</code>ファイルを変更してダウンロードの動作をカスタマイズできます。例えば、ファイルの出力形式を変更したり、異なる品質を選択したりすることができます。</p>
+        <p>例えば、最良の音声のみをダウンロードするには、次のように<code>ydl_opts</code>を変更します：</p>
+        <pre><code class="language-python">ydl_opts = {
+    &#39;format&#39;: &#39;bestaudio&#39;,
+    &#39;outtmpl&#39;: &#39;%(title)s.%(ext)s&#39;,
+}
+</code></pre>
+        <h2>トラブルシューティング</h2>
+        <h3>エラー: <code>ffmpegがインストールされていません</code></h3>
+        <p><code>ffmpeg</code>がインストールされていて、システムの<code>PATH</code>に含まれていることを確認してください。詳細なインストール手順については、上記のセクションを参照してください。</p>
+        <h3>エラー: <code>ERROR: You have requested merging of multiple formats but ffmpeg is not installed</code></h3>
+        <p>このエラーが発生した場合、<code>yt-dlp</code>は動画と音声ファイルをマージするために<code>ffmpeg</code>を必要とします。<code>ffmpeg</code>をインストールすれば、この問題は解決します。</p>
+        <h2>ライセンス</h2>
+        <p>このプロジェクトはMITライセンスの下でライセンスされています - 詳細については、<a href="LICENSE">LICENSE</a>ファイルをご覧ください。</p>
+    </div>
+    
+    <a href="https://github.com/dostesuto/yt-dl" class="download-btn">ダウンロード</a>
+</div>
+
+</body>
+</html>
